@@ -3,7 +3,7 @@ alert('Hello world');
 
 // Variable
 let favoriteFood = 'rice';
-console.log(favoriteFood)
+document.write(favoriteFood);
 
 // Create a Variable 'size', representing 100 and double the variable
 let size = 100;
