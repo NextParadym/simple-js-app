@@ -1,11 +1,34 @@
-// Hello World
-alert('Hello world');
 
-// Variable
-let favoriteFood = 'rice';
-document.write(favoriteFood);
+// Create a List of Pokemons Objects
 
-// Create a Variable 'size', representing 100 and double the variable
-let size = 100;
-let doubleSize = size * 2;
-document.write(doubleSize);
+let pokemonList = [
+  {
+    name: "Charmeleon",
+    height: " 1.1",
+    type: "fire"
+  },
+
+  {
+    name: "Nidoking",
+    height: " 1.4",
+    type: ["ground","poison"]
+  },
+
+  {
+    name: "Psyduck",
+    height: " 0.8",
+    type: "water"
+  },
+
+  {
+    name: "Pikachu",
+    height: " 0.4",
+    type: "Electric"
+  },
+
+  {
+    name: "Metapod,
+    height: " 0.7",
+    type: "Bug"
+  }
+];
