@@ -29,7 +29,7 @@ let pokemonList = [
   {
     name: "Venusaur",
     height: 2,
-  type: ["ground","poison"]
+    type: ["ground","poison"]
   }
 ];
 
