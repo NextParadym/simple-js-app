@@ -32,3 +32,14 @@ let pokemonList = [
     type: "Bug"
   }
 ];
+
+//a loop with each pokemon name and their respective height
+//a label if a pokemon is bigger than 1.5
+
+for (let i = 0; i < pokemonList.length; i++) {
+  if (pokemonList[i].height > 1.1) {
+    document.write('<p>' + pokemonList[i].name + ' (height:' + pokemonList[i].height + ')' + ' -Big Pokemon! </p>');
+  } else {
+    document.write('<p>' + pokemonList[i].name + ' (height:' + pokemonList[i].height + ')' + '</p>');
+  }
+}
