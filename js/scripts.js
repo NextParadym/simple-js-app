@@ -1,41 +1,33 @@
-
 // Create a List of Pokemons Objects
-
-// Create a empty List of Pokemons Objects
-
-pokemonList = [];
-
-// Populate empty List of Pokemons Objects
-
 
 let pokemonList = [
   {
     name: "Charmeleon",
     height: 1.1,
-    type: "fire"
+    types: "fire"
   },
 
   {
     name: "Nidoking",
     height: 1.4,
-    type: ["ground","poison"]
+    types: ["ground","poison"]
   },
 
   {
     name: "Psyduck",
     height: 0.8,
-    type: "water"
+    types: "water"
   },
 
   {
     name: "Pikachu",
     height: 0.4,
-    type: "Electric"
+    types: "Electric"
   },
 
   {
     name: "Venusaur",
     height: 2,
-    type: ["ground","poison"]
+    types: ["ground","poison"]
   }
 ];
