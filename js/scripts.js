@@ -4,7 +4,7 @@ let pokemonList = [
   {
     name: "Charmeleon",
     height: 1.1,
-    types: "fire"
+    types: ["fire"]
   },
 
   {
@@ -16,13 +16,13 @@ let pokemonList = [
   {
     name: "Psyduck",
     height: 0.8,
-    types: "water"
+    types: ["water"]
   },
 
   {
     name: "Pikachu",
     height: 0.4,
-    types: "Electric"
+    types: ["Electric"|
   },
 
   {
