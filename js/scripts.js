@@ -34,7 +34,7 @@ let pokemonList = [
    // create a for loop to iterate over each object in the List of Pokemons Objects
     for (let i = 0; i < pokemonList.length; i++) {
   if (pokemonList[i].height > 1.1) {
-    document.write('<p>' + pokemonList[i].name + ' (height:' + pokemonList[i].height + ')' + ' -Big Pokemon! </p>');
+    document.write('<p>' + pokemonList[i].name + ' (height:' + pokemonList[i].height + ')' + 'Wow, that’s big </p>');
   } else {
     document.write('<p>' + pokemonList[i].name + ' (height:' + pokemonList[i].height + ')' + '</p>');
   }
