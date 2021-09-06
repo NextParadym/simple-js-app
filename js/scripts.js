@@ -43,7 +43,6 @@ var pokemonRepository = (function (){
   };
 })();
 
-  
   // forEach() Loop of the pokemonList
 document.write('<ol>');
 pokemonRepository.getAll().forEach(function(pokemon) {
