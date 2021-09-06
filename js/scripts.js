@@ -1,5 +1,5 @@
-// Create a List of Pokemons Objects
 
+// Using forEach function intead of for loop
 let pokemonList = [
   {
     name: "Charmeleon",
@@ -28,13 +28,12 @@ let pokemonList = [
   }
 ];
 
-// create a for loop to iterate over each object in the List of Pokemons Objects
+pokemonList.forEach(function(pokemon) {
+  
+});
+
 document.write('<ol>');
-for (let i = 0; i < pokemonList.length; i++) {
-  if (pokemonList[i].height >= 1.0) {
-    document.write('<li>' + pokemonList[i].name + ' (height:' + pokemonList[i].height + ')' + ' - Wow, that’s big </li>');
-  } else {
-    document.write('<li>' + pokemonList[i].name + ' (height:' + pokemonList[i].height + ')' + '</li>');
-  }
-}
+pokemonList.forEach(function(pokemon) {
+  document.write('<li>' +pokemon.name + ' is ' + pokemon.height+ ' by height'+ ' with ' + pokemon.types + ' as type category.'+ '</li>');
+})
 document.write('</ol>');
