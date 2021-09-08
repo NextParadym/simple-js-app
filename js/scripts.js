@@ -44,6 +44,13 @@ var pokemonRepository = (function () {
   }
   function getAll() {
     return repository;
+
+  //  showDetails function and console
+
+    function showDetails(pokemon) {
+    }
+    console.log(showDetails(pokemon));
+
   }
   function addListItem(pokemon) {
     let pokemonList = document.querySelector(".pokemon-list");
@@ -53,12 +60,18 @@ var pokemonRepository = (function () {
     button.classList.add("button-class");
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
+
+    // add Eventlistener
+    button.addEventListener('click', function (event) {
+    });
+
   }
   return {
     add: add,
     getAll: getAll,
     addListItem: addListItem
   };
+
 })();
 
 pokemonRepository.add({ name: "Hoothoot", height: 0.7, types: ["normal","plug"] });
