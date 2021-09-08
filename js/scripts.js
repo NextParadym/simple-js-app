@@ -1,7 +1,7 @@
 
 // pokemonRepository
-var pokemonRepository = (function (){ 
-  var pokemonList = [
+var pokemonRepository = (function () {
+  var repository = [
     {
       name: "Charmeleon",
       height: 1.1,
@@ -10,7 +10,7 @@ var pokemonRepository = (function (){
     {
       name: "Nidoking",
       height: 1.4,
-      types: ["ground","poison"]
+      types: ["ground", "poison"]
     },
     {
       name: "Psyduck",
@@ -25,27 +25,55 @@ var pokemonRepository = (function (){
     {
       name: "Venusaur",
       height: 2,
-      types: ["ground","poison"]
+      types: ["ground", "poison"]
     }
   ];
 
-  function getAll() {
-    return pokemonList;
-  } //returns Pokemon List
 
   function add(pokemon) {
-    pokemonList.push(pokemon);
-  } //add pokemons
-
+    if (
+      typeof pokemon === "object" &&
+      "name" in pokemon &&
+      "height" in pokemon &&
+      "types" in pokemon
+    ) {
+      repository.push(pokemon);
+    } else {
+      console.log("pokemon is not correct");
+    }
+  }
+  function getAll() {
+    return repository;
+  }
+  function addListItem(pokemon) {
+    let pokemonList = document.querySelector(".pokemon-list");
+    let listpokemon = document.createElement("li");
+    let button = document.createElement("button");
+    button.innerText = pokemon.name;
+    button.classList.add("button-class");
+    listpokemon.appendChild(button);
+    pokemonList.appendChild(listpokemon);
+  }
   return {
     add: add,
-    getAll: getAll
+    getAll: getAll,
+    addListItem: addListItem
   };
 })();
 
-  // forEach() Loop of the pokemonList
-document.write('<ol>');
+pokemonRepository.add({ name: "Hoothoot", height: 0.7, types: ["normal","plug"] });
+
+ // forEach() Loop of the pokemonList
+
+pokemonRepository.getAll().forEach(function(pokemon) {
+  pokemonRepository.addListItem(pokemon);
+})
+
+console.log(pokemonRepository.getAll());
+
+ // forEach() Loop of the pokemonList
+document.write('<ul>');
 pokemonRepository.getAll().forEach(function(pokemon) {
   document.write('<li>' +pokemon.name + ' is ' + pokemon.height+ ' by height'+ ' with ' + pokemon.types + ' as type category.'+ '</li>');
 })
-document.write('</ol>');
+document.write('</ul>');
