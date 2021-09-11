@@ -90,4 +90,5 @@ pokemonRepository.getAll().forEach(function(pokemon) {
   });
 });
 
+// console log
 console.log(pokemonRepository.getAll());
