@@ -1,17 +1,25 @@
 
+* {
+    box-sizing: border-box;
+  }
+  
 .container{
     border: 2px blue solid;
-    height: 150px;
+    height: 7900px;
     width: 230px;
     margin-bottom: 10px;
+    border: 2px solid #4caf50;
+    max-width: 760px;
+    margin: 0 auto;
   }
-  #container2{
+  /* 
+#container2{
     border: 2px black solid;
     height: 60px;
     width: 214px;
     margin-bottom: 10px;
     text-align: left;
-  }
+  }*/
 
   .pokemon-button{
     background-color: #4caf50; /* Green */
