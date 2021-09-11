@@ -66,11 +66,13 @@ let pokemonRepository = (function () {
   }
 
   //  showDetails function and console
-  function showDetails(pokemon) {
-     pokemonRepository.loadDetails(item).then(function () {
+
+  function showDetails(item) {
+    pokemonRepository.loadDetails(item).then(function () {
       console.log(item);
-       });
+    });
   }
+
 
   return {
     add: add,
@@ -91,4 +93,4 @@ pokemonRepository.getAll().forEach(function(pokemon) {
 });
 
 // console log
-console.log(pokemonRepository.getAll());
+//console.log(pokemonRepository.getAll());
