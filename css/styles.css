@@ -4,10 +4,26 @@
     box-sizing: border-box;
   }
 
+/*style the base size to 200 px and allow to shrink*/
+.page-header__item{
+    flex: 0 1 200px;
+  }
+  
+  #logo {
+    width: 10px;
+    height: 10px;
+  }
+  /*the last child is the menubar*/
+  .page-header__item:last-child{
+    flex-grow: 1;
+    text-align: right;
+  
+  }
+
 body{
     font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 20px;
     /* Sets the font size to 16px */
     line-height: 1.6;
     /* Sets the line-height to 1.6 */
@@ -15,8 +31,8 @@ body{
 
 .container{
     border: 2px blue solid;
-    height: 10300px;
-    width: 230px;
+    height: 9800px;
+    width: 300px;
     margin-bottom: 10px;
     border: 3px solid #4caf50;
     max-width: 760px;
@@ -49,9 +65,9 @@ body{
    
   }
 
-  
   .pokemon-list{
     font-size: 32px;
+    margin: 0 auto;
   }
 
   h1 {
@@ -60,77 +76,51 @@ body{
 
 /*media queries for max width 750px*/
 @media all and (max-width: 750px) {
-    
-    .container{
-        width: 50%;
-        float:none;
-      
+
+    body{
+        font-size: 100%;
       }
-      
-      
-      .pokemon-button{
-        width: 30%;
+   
+      .pokemon-list{
+        font-size: 100%;
         float: none;
-        margin-left: 20%;
-        margin-bottom:  2%;
-    
       }
   
     h1 {
-      font-size: 22;
+      font-size: 22px;
     }
-    .pokemon-list{
-        font-size: 5%;
-        float: none;
-      }
+    
   }
   
   /*media queries for minwidth: 500px and maxwidth: 750*/
 @media all and (min-width: 500px) and (max-width: 750px){
-    .container{
-        width: 30%;
-        float: none;
-        
+
+    body{
+        font-size: 80%;
       }
      
-      .pokemon-button{
-        width: 30%;
-        float: none;
-        margin-left: 20%;
-        margin-bottom: none;
-        margin-bottom:  2%;
-      
-      }
       .pokemon-list{
-        font-size: 2%;
+        font-size: 50%;
         float: none;
-      }
+    
+    } 
     h1 {
-      font-size: 22;
-    }
-
+            font-size: 22px;
+        }
   /*media queries for maxwidth: 500px */
   @media all and  (max-width: 500px){
-    .container{
-        width: 20%;
-        float: none;
-        
-      }
-  
-      .pokemon-button{
-        width: 20%;
-        float: none;
-        margin-left: 20%;
-        margin-bottom: 2%;
 
+    body{
+        font-size: 80%;
       }
+    
       .pokemon-list{
-        font-size: 1%;
+        font-size: 30%;
         float: none;
-      }
+      } 
 
     h1 {
-      font-size: 22;
+      font-size: 22px;
     }
   
 }

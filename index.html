@@ -9,15 +9,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
   </head>
-  <body>
-    <div id='main-section' class='container'>
-      <div id='container2'>
-       <h1>pokedex</h1>
-        </div>
-         <div class="pokemon-list">
-      </div>
-     </div>
+  <header class="page-header">
+    <div class="pokemon-logo">
+      <img src="img/pokemon-logo.jpeg" class="page-header__item" id="logo" alt="logo of pokedex app"style="width:150px;height:100px;">
+    </div>
+  </header>
      <body>
+      <div id='main-section' class='container'>
+        <h1>pokedex</h1>
+      <ul class="pokemon-list"></ul>
+     </div>
       <strong>
       <script src="js/polyfill.min.js"></script>
       <script src="js/fetch.umd.js"></script>
