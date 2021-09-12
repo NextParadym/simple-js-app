@@ -28,6 +28,7 @@ let pokemonRepository = (function () {
     button.classList.add("pokemon-button");
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
+    
     // add Eventlistener
     button.addEventListener('click', function(event) {
       showDetails(pokemon);
@@ -44,10 +45,10 @@ let pokemonRepository = (function () {
           detailsUrl: item.url
         };
         add(pokemon);
-        console.log(pokemon);
+       
       });
     }).catch(function (e) {
-      console.error(e);
+   
     })
   }
 
@@ -56,6 +57,7 @@ let pokemonRepository = (function () {
     return fetch(url).then(function (response) {
       return response.json();
     }).then(function (details) {
+
       // Now we add the details to the item
       item.imageUrl = details.sprites.front_default;
       item.height = details.height;
@@ -91,6 +93,3 @@ pokemonRepository.getAll().forEach(function(pokemon) {
   pokemonRepository.addListItem(pokemon);
   });
 });
-
-// console log
-//console.log(pokemonRepository.getAll());
