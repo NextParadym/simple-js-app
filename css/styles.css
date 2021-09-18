@@ -18,8 +18,10 @@ body{
 /*style the base size to 200 px and allow to shrink*/
 .page-header__item{
     flex: 0 1 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
-
   /*the last child is the menubar*/
   .page-header__item:last-child{
     flex-grow: 1;
