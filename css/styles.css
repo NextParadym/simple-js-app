@@ -88,6 +88,15 @@ a:active {
   color: #489c79;
 }
 
+img{
+  flex: 0 1 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: 70%;
+}
+
 #modal-container {
   position: fixed;
   padding: 20px;
@@ -96,6 +105,8 @@ a:active {
   left: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
 
   
 
@@ -117,7 +128,7 @@ a:active {
   background: #fff;
   padding: 15px;
   width: 300px;
-  max-width: 30%;
+  max-width: 100%;
   text-align: left;
 }
 
@@ -168,6 +179,13 @@ a:active {
   #modal-container {
     max-width: 100%;
     text-align: left;
+    height: 100%;
+    width: 100%;
+  
+  }
+  img{
+    width: 100%;
+    height: 100%;
   }
   .Pokename {
     max-width: 100%;
@@ -193,6 +211,11 @@ a:active {
   #modal-container {
     max-width: 80%;
     text-align: left;
+  
+  }
+  img{
+    width: 70%;
+    height: 70%;
   }
   .Pokename {
     max-width: 10%;
@@ -219,6 +242,12 @@ a:active {
   #modal-container {
     max-width: 100%;
     text-align: left;
+  
+  }
+
+  img{
+    width: 30%;
+    height: 30%;
   }
   .Pokename {
     max-width: 20%;
