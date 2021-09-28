@@ -2,18 +2,7 @@ let pokemonRepository = (function () {
   let pokemonList = [];
   const apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=200";
 
-  function showLoadingMessage() {
-    document.querySelector(".loading-message").classList.add("visible");
-  }
-
-  function hideLoadingMessage() {
-    document.querySelector(".loading-message").classList.add("hidden");
-  }
-
-  function getAll() {
-    return pokemonList;
-  }
-
+  // add pokemon
   function add(pokemon) {
     if (
       typeof pokemon === "object" &&
@@ -26,6 +15,12 @@ let pokemonRepository = (function () {
     }
   }
 
+  function getAll() {
+    return pokemonList;
+  }
+
+
+      //  addListItem
   function addListItem(pokemon) {
     let pokemonList = document.querySelector(".pokemon-list");
 
@@ -41,11 +36,14 @@ let pokemonRepository = (function () {
 
     listItem.appendChild(pokemonButton);
     pokemonList.appendChild(listItem);
+  
+    // add Eventlistener
     pokemonButton.addEventListener("click", function () {
       showDetails(pokemon);
     });
   }
 
+   // Load list
   function loadList() {
     showLoadingMessage();
     return fetch(apiUrl)
@@ -67,6 +65,7 @@ let pokemonRepository = (function () {
       });
   }
 
+   // Load Details
   function loadDetails(item) {
     showLoadingMessage();
     let url = item.detailsUrl;
@@ -94,12 +93,8 @@ let pokemonRepository = (function () {
       });
   }
 
-  function showDetails(item) {
-    pokemonRepository.loadDetails(item).then(function () {
-      showModal(item);
-    });
-  }
 
+   //  showModal function 
   function showModal(item) {
     let modalBody = $(".modal-body");
     let modalTitle = $(".modal-title");
@@ -129,9 +124,31 @@ let pokemonRepository = (function () {
     modalBody.append(abilitiesElement);
   }
 
+  function removeLast() {
+    pokemonList.pop();
+    }
+    
+   //  showDetails function 
+  function showDetails(item) {
+    pokemonRepository.loadDetails(item).then(function () {
+      showModal(item);
+    });
+  }
+
+    //  showloading message
+    function showLoadingMessage() {
+      document.querySelector(".loading-message").classList.add("visible");
+    }
+  
+    //  hideloading message
+    function hideLoadingMessage() {
+      document.querySelector(".loading-message").classList.add("hidden");
+    }
+    
   return {
     add: add,
     getAll: getAll,
+    removeLast:removeLast,
     addListItem: addListItem,
     loadList: loadList,
     loadDetails: loadDetails,
@@ -140,32 +157,9 @@ let pokemonRepository = (function () {
   };
 })();
 
+ // forEach() Loop of the pokemonList
 pokemonRepository.loadList().then(function () {
   pokemonRepository.getAll().forEach(function (pokemon) {
     pokemonRepository.addListItem(pokemon);
   });
 });
-
-let mybutton = document.getElementById("btn-back-to-top");
-
-window.onscroll = function () {
-  scrollFunction();
-};
-
-function scrollFunction() {
-  if (
-    document.body.scrollTop > 200 ||
-    document.documentElement.scrollTop > 200
-  ) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-mybutton.addEventListener("click", backToTop);
-
-function backToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
