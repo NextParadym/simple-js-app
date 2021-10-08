@@ -16,11 +16,14 @@ CSS
 Vanila JavaScript
 jQuery
 Bootstrap
-External files
+
+External files:
+
 Fetch polyfill (https://github.com/github/fetch)
 Promise Polyfill (https://github.com/taylorhakes/promise-polyfill)
+
 About
-CF Achievement 1 Project: JavaScript App (Pokédex)
+PokeDex Game App Project: JavaScript App (Pokédex)
 
 Resources
  Readme
