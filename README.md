@@ -1,4 +1,4 @@
-Pokédex (JavaScript App) features
+PokeDex (JavaScript App) features
 
 Application URL: https://nextparadym.github.io/simple-js-app/
 
