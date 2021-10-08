@@ -20,6 +20,7 @@ Bootstrap
 External files:
 
 Fetch polyfill (https://github.com/github/fetch)
+
 Promise Polyfill (https://github.com/taylorhakes/promise-polyfill)
 
 About
